@@ -26,3 +26,6 @@ frontend/yarn-error.log*
 
 # Archivos de entorno (contienen secretos)
 .env
+
+node_modules/
+package-lock.json
