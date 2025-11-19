@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
-import {SafeAreaView} from "react-native-safe-area-context";
+import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity } from 'react-native';
 
 export default function RoleSelectionScreen({ navigation }) {
   const handleSelectRole = (role) => {
@@ -12,14 +11,14 @@ export default function RoleSelectionScreen({ navigation }) {
         <Text style={styles.headerTitle}>Registro</Text>
         <Image source={require('../assets/logo.png')} style={styles.logo} />
         <View style={styles.selectionContainer}>
-          <Pressable style={styles.card} onPress={() => handleSelectRole('trabajador')}>
+          <TouchableOpacity style={styles.card} onPress={() => handleSelectRole('trabajador')}>
             <Image source={require('../assets/worker-avatar.png')} style={styles.cardImage} />
             <Text style={styles.cardText}>Trabajador</Text>
-          </Pressable>
-          <Pressable style={styles.card} onPress={() => handleSelectRole('usuario')}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.card} onPress={() => handleSelectRole('usuario')}>
             <Image source={require('../assets/user-avatar.png')} style={styles.cardImage} />
             <Text style={styles.cardText}>Usuario</Text>
-          </Pressable>
+          </TouchableOpacity>
         </View>
         <Text style={styles.instructionText}>Selecciona el tipo de cuenta con el que quieres registrarte.</Text>
       </View>
