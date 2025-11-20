@@ -7,7 +7,9 @@
    npm install --legacy-peer-deps
    ```
 
-3. Start the app with caché clear
+Note: A lot of warnings will appear, this is normal
+
+3. Start the app with cache clear
 
    ```bash
    npx expo start -c
